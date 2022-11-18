@@ -3382,8 +3382,8 @@ load_annotation<-function(path){
   if(is(GTF_annotation$genome,'FaFile')){
     genome_sequence <- GTF_annotation$genome            
   }else{
-    library(GTF_annotation$genome_package,character.only = T)
-    genome_sequence<-get(GTF_annotation$genome_package)
+    library(GTF_annotation$genome,character.only = T)
+    genome_sequence<-get(GTF_annotation$genome)
   }
   GTF_annotation<<-GTF_annotation
   genome_seq<<-genome_sequence
