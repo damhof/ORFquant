@@ -1212,7 +1212,7 @@ select_quantify_ORFs<-function(results_ORFs,P_sites,P_sites_uniq,cutoff_cums=NA,
   #disjointExons(orfann)
   
   
-  exbin<-disjointExons(orfann)
+  exbin<-exonicParts(orfann)
   
   
   d<-rep(0,length(exbin))
@@ -3616,7 +3616,7 @@ prepare_annotation_files<-function(annotation_directory,twobit_file=NULL,gtf_fil
     
     
     #define exonic bins, including regions overlapping multiple genes
-    nsns<-disjointExons(annotation,aggregateGenes=T)
+    nsns<-exonicParts(annotation,aggregateGenes=T)
     
     
     
